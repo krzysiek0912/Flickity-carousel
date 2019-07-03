@@ -1,0 +1,13 @@
+.container { max-width: 1200px; text-align: center; }
+
+.carouselContainer { position: relative; }
+
+.carouselContainer .button-first { cursor: pointer; position: absolute; top: 20px; right: 20px; padding: 10px 20px; background: black; border: none; border-radius: 5px; color: white; }
+
+.carouselContainer .progress-bar { height: 20px; width: 0; background: #333; }
+
+.main-carousel { width: 100%; }
+
+.main-carousel .carousel-cell { height: 50vh; min-height: 250px; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 100%; background-size: cover; background-position: center center; }
+
+.main-carousel .container { background: rgba(0, 0, 0, 0.3); padding: 30px 60px; border-radius: 5px; color: white; }
