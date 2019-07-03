@@ -24,7 +24,7 @@
 .main-carousel {
   width: 100%;
   .carousel-cell {
-    height: 50vh;
+    height: calc(50vh - 20px);
     min-height: 250px;
     display: flex;
     justify-content: center;
@@ -39,4 +39,11 @@
     border-radius: 5px;
     color: white;
   }
+}
+
+//Google map
+#map {
+  height: 50vh; /* The height is 400 pixels */
+  min-height: 250px;
+  width: 100%; /* The width is the width of the web page */
 }

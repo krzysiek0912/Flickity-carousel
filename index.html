@@ -20,6 +20,8 @@
       <div class="progress-bar"></div>
       <button class="button-first">Restart</button>
     </div>
+    <div id="map"></div>
+
     <script id="template-slider-item" type="x-tmpl-mustache">
       <div
             id="{{ id }}"
@@ -40,19 +42,22 @@
           image: "http://via.placeholder.com/1200x600/ffffaa/000000",
           title: "First Slider",
           description:
-            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          coords: { lat: 50.719513, lng: 23.246375 }
         },
         {
           image: "http://via.placeholder.com/1200x600/ff00aa/000000",
           title: "Second Slider",
           description:
-            '<p>Lorem ipsum2.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+            '<p>Lorem ipsum2.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          coords: { lat: 51.248025, lng: 22.567482 }
         },
         {
           image: "http://via.placeholder.com/1200x600/ffffff/000000",
           title: "Next slider",
           description:
-            '<p>Lorem ipsum3.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+            '<p>Lorem ipsum3.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          coords: { lat: 52.247805, lng: 21.013283 }
         }
       ];
     </script>
@@ -63,5 +68,10 @@
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script src="vendor/mustache.min.js"></script>
     <script src="js/script.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtD67MfAhBBZqH-yiXMaYcp13uBQyjtqo&callback=initMap"
+    ></script>
   </body>
 </html>
