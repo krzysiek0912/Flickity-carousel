@@ -16,77 +16,52 @@
 
   <body>
     <div class="carouselContainer">
-      <div class="main-carousel">
-        <div
-          id="carousel-cell1"
-          class="carousel-cell"
-          style="background-image:url('https://images.pexels.com/photos/2172156/pexels-photo-2172156.jpeg')"
-        >
-          <div class="container">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-            odit possimus vel reiciendis? Sint consectetur nihil ab distinctio
-            quis dignissimos illo placeat sequi, laborum odio dicta adipisci
-            minus, nemo corrupti?
-          </div>
-        </div>
-        <div
-          id="carousel-cell2"
-          class="carousel-cell"
-          style="background-image: url('https://images.pexels.com/photos/1204467/pexels-photo-1204467.jpeg')"
-        >
-          <div class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-            minima explicabo dolores quidem, autem omnis tenetur excepturi.
-            Deleniti impedit earum eum, ex doloremque saepe eligendi,
-            perspiciatis assumenda ratione repudiandae architecto!
-          </div>
-        </div>
-        <div
-          id="carousel-cell3"
-          class="carousel-cell"
-          style="background-image: url('https://images.pexels.com/photos/808960/pexels-photo-808960.jpeg')"
-        >
-          <div class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            odio aut optio magni velit id nesciunt explicabo provident, ducimus
-            labore rerum. Distinctio, sit. Quos eius veritatis incidunt
-            necessitatibus accusamus nihil.
-          </div>
-        </div>
-        <div
-          id="carousel-cell4"
-          class="carousel-cell"
-          style="background-image: url('https://images.pexels.com/photos/1123791/pexels-photo-1123791.jpeg')"
-        >
-          <div class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            odio aut optio magni velit id nesciunt explicabo provident, ducimus
-            labore rerum. Distinctio, sit. Quos eius veritatis incidunt
-            necessitatibus accusamus nihil.
-          </div>
-        </div>
-        <div
-          id="carousel-cell5"
-          class="carousel-cell"
-          style="background-image: url('https://images.pexels.com/photos/1243366/pexels-photo-1243366.jpeg')"
-        >
-          <div class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            odio aut optio magni velit id nesciunt explicabo provident, ducimus
-            labore rerum. Distinctio, sit. Quos eius veritatis incidunt
-            necessitatibus accusamus nihil.
-          </div>
-        </div>
-      </div>
+      <div class="main-carousel"></div>
       <div class="progress-bar"></div>
       <button class="button-first">Restart</button>
     </div>
-
+    <script id="template-slider-item" type="x-tmpl-mustache">
+      <div
+            id="{{ id }}"
+            class="carousel-cell"
+            style="background-image: url('{{ image }}')"
+          >
+          <div class="container">
+              <h2>{{title}}</h2>
+              <div>
+                  {{{ description }}}
+              </div>
+          </div>
+      </div>
+    </script>
+    <script>
+      var sliderData = [
+        {
+          image: "http://via.placeholder.com/1200x600/ffffaa/000000",
+          title: "First Slider",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        },
+        {
+          image: "http://via.placeholder.com/1200x600/ff00aa/000000",
+          title: "Second Slider",
+          description:
+            '<p>Lorem ipsum2.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        },
+        {
+          image: "http://via.placeholder.com/1200x600/ffffff/000000",
+          title: "Next slider",
+          description:
+            '<p>Lorem ipsum3.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        }
+      ];
+    </script>
     <script
       type="text/javascript"
       src="vendor/flickity/flickity.pkgd.min.js"
     ></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="vendor/mustache.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
